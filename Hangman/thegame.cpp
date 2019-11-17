@@ -113,7 +113,6 @@ void Thegame::tryLetters()// De implementatie van het raden van de letters in ee
     }
 }
 
-
 void Thegame::storetheword(string x)// plaatst geheim woord in privé variabele
 {
     response=x;
