@@ -113,7 +113,6 @@ void Thegame::tryLetters()// De implementatie van het raden van de letters in ee
     }
 }
 
-
 void Thegame::storetheword(string x)// plaatst geheim woord in privé variabele
 {
     response=x;
@@ -223,7 +222,6 @@ void Thegame::game()
           cout<<"You have entered something wrong, please restart"<<endl;
 
         }
-
     }
 }
 
@@ -233,9 +231,6 @@ void Thegame::resetword()// Reset het woord en het aantal kansen
     shown="";
     tries=7;
 }
-
-
-
 
 void Thegame::addTries()//Functie geeft aantal kansen weer
 {
@@ -334,6 +329,3 @@ void Thegame::hangmandrawing()//Functie voor het tekenen van Hangman
         cout << "_|______________"<<endl;
     }
 }
-
-
-
