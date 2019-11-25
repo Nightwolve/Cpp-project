@@ -7,7 +7,7 @@ using namespace std;
 
 class players
 {
-public:
+public:		//11. members initialisatie
     players()  {/*empty*/}
     ~players() {/*empty*/}
     virtual QString playerName()       {return "NAME";} //Speler met naam

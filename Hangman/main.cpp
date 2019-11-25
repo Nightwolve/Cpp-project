@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main()
+int main()	//1. Clean main
 {
     Thegame().game();
     return 0;
