@@ -11,7 +11,7 @@
 #include <QTextStream>
 #include <windows.h>
 
-#define fileLocation "C://Users//Administrator//Desktop//Hangman//lastword.txt"
+#define fileLocation "C://Users//Bart//Desktop//Hangman//lastword.txt"
 
 #include "playerone.h"
 #include "playertwo.h"
