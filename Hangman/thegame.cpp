@@ -26,7 +26,7 @@ void Thegame::tryLetters()// De implementatie van het raden van de letters in ee
     cout<<"Welke letter denk je dat in het woord staat?"<<endl;
     cin>>letter;
 
-    for(int b=0; b<(int)response.size(); b++)	//useful proven dynamic polymorphism
+    for(int b=0; b<(int)response.size(); b++)	//No. 8 useful proven dynamic polymorphism
     {
         if(response[b]==letter || toupper(letter)==response[b])
         {
