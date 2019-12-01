@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class players
+class players	//No.5 correct abstract base class
 {
 public:
     players()  {/*empty*/}

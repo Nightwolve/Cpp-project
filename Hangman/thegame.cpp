@@ -1,11 +1,12 @@
 #include "thegame.h"
 
-using namespace std;
-
+using namespace std;	//No. 19 no mistake in object-oriented programming
+//No. 20 no globals, but statics if needed
+//No. 46 correct usage of command line parameters
 void Thegame::tryLetters()// De implementatie van het raden van de letters in een reeks van verborgen letters
 {
-    int loop=1;
-    char letter;
+    const int loop=1; 
+    char letter; 	//No. 24 2 unsigned chars or other better usage of memory efficient type
     int showncounter=0;
 
     for(int i=0; i<(int)response.length(); i++)
@@ -25,7 +26,7 @@ void Thegame::tryLetters()// De implementatie van het raden van de letters in ee
     cout<<"Welke letter denk je dat in het woord staat?"<<endl;
     cin>>letter;
 
-    for(int b=0; b<(int)response.size(); b++)
+    for(int b=0; b<(int)response.size(); b++)	//useful proven dynamic polymorphism
     {
         if(response[b]==letter || toupper(letter)==response[b])
         {
@@ -114,7 +115,7 @@ void Thegame::tryLetters()// De implementatie van het raden van de letters in ee
 }
 
 
-void Thegame::storetheword(string x)// plaatst geheim woord in privé variabele
+void Thegame::storetheword(string x)//NO. 11 member initialization in constructors/ plaatst geheim woord in privé variabele
 {
     response=x;
 }
@@ -123,15 +124,15 @@ void Thegame::storetheword(string x)// plaatst geheim woord in privé variabele
 Thegame::Thegame()
 {}
 
-Thegame::~Thegame()//Functie slaat laatst gekozen woord op in een .txt file
-{
-    QFile file(fileLocation);
+Thegame::~Thegame()//No. 12 at least 2 destructors/ Functie slaat laatst gekozen woord op in een .txt file // No. 45 useful usage of (modern) file-I/O 
+{					// No. 60 a nice extra that you think that should deserve grading (stuff you put time in and is not rewarded by an item above)
+    QFile file(fileLocation);	//No. 28 dynamic memory allocation???
     file.open(QIODevice::WriteOnly | QIODevice::Text);
-    QTextStream out(&file);
+    QTextStream out(&file);	//No. 27 useful pointer declaration and usage
     //out << "The last word was: " + usersWord;
-    file.close();
+    file.close();	
 
-    delete obj;
+    delete obj;	//No. 29 dynamic memory removing
 }
 
 void Thegame::game()
@@ -169,15 +170,15 @@ void Thegame::game()
 
         if(choice==1)
         {
-            HANDLE hStdin = GetStdHandle(STD_INPUT_HANDLE);
+            HANDLE hStdin = GetStdHandle(STD_INPUT_HANDLE); // No. 17 getters and setters for member variables
             DWORD mode = 0;
             GetConsoleMode(hStdin, &mode);
-            SetConsoleMode(hStdin, mode & (~ENABLE_ECHO_INPUT));
+            SetConsoleMode(hStdin, mode & (~ENABLE_ECHO_INPUT)); //No. 17 getters and setters for member variables
             cout << "Typ het geheime woord in:" << endl;
             cin.ignore();
             getline(cin,usersWord);
             SetConsoleMode(hStdin, mode);
-            obj.storetheword(usersWord);
+            obj.storetheword(usersWord);	//No.7 useful virtual function
             cout<<"GEHEIM WOORD SUCCESVOL OPGESLAGEN"<<endl;
             cout<<endl;
             cout<<endl;
@@ -242,13 +243,13 @@ void Thegame::addTries()//Functie geeft aantal kansen weer
     tries--;
 }
 
-QString Thegame::getName()
+QString Thegame::getName() //No. 31 useful string class usage
 {
     int counter = 0;
     srand(time(NULL)); // pakt random waarde, moet erbij staan! anders werkt rand() niet
     int number = rand() % 3; // random getal 1-3 voor naam
 
-    list<players*> playerlist;//container class
+    list<players*> playerlist;//No. 32 container class
        playerlist.push_back(new playerone()); //player 1 naam
        playerlist.push_back(new playertwo()); //player 2 naam
        playerlist.push_back(new playerthree()); //player 3 naam

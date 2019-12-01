@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class playerone: public players
+class playerone: public players	//no.4 useful and correct inheritance
 {
 public:
     playerone(){}
