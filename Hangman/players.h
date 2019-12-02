@@ -16,4 +16,4 @@ public:
 #endif // NAME_H
 
 //functie in thegame.cpp geeft random waarde terug die locatie van player-one/two/three teruggeeft
-//zo wordt momenteel een random naam gekozen
+//zo wordt momenteel een random naam gekozen, dit was normaal ook een punt.

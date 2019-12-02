@@ -26,11 +26,11 @@ using namespace std;
 class Thegame               //No. 2 useful class(obvious reasons)
 {
 private:                    //No. 3 usefull encapsulation --> kunnen enkel in class Thegame te gebruiken // no. 18 correct protections???
-    const int maxTries = 7; //No. 10 at least 2 specific constructors
-    const int tries=7;        //No. 15 default values in function definition
+    int maxTries = 7; //No. 10 at least 2 specific constructors$
+    int tries=7;        //No. 15 default values in function definition$$
     uint showncounter;      //No. 41 correctly using const in almost all places
-    const int choice=0;   //No. 16 useful member variabel
-    const int loop=1; // variabele voor de loop
+    int choice=0;   //No. 16 useful member variabel
+    int loop=1; // variabele voor de loop
     char ans='n';   //No. 24 2 unsigned chars or other better usage of memory efficient type / originele conditie van de while loop, basismenu met instructies
     string usersWord;   // Geheim woord dat gebruiker invoerd
     string topic;   // Onderwerp van game "name"
@@ -49,7 +49,7 @@ public:     //openbare functies, overal te gebruiken
     Thegame();
     ~Thegame(); //No. 12 at least 2 destructors
     void game();
-    inline QString name() {return Thegame().getName();} //No. 14 useful member function // No. 42 correct useage of inline function
+    inline const QString name() {return Thegame().getName();} //No. 14 useful member function // No. 42 correct useage of inline function
 };
 
 #endif // THEGAME_H

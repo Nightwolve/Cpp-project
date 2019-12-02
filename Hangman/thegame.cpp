@@ -5,7 +5,7 @@ using namespace std;	//No. 19 no mistake in object-oriented programming
 //No. 46 correct usage of command line parameters
 void Thegame::tryLetters()// De implementatie van het raden van de letters in een reeks van verborgen letters
 {
-    const int loop=1; 
+    int loop=1;
     char letter; 	//No. 24 2 unsigned chars or other better usage of memory efficient type
     int showncounter=0;
 
@@ -122,7 +122,8 @@ void Thegame::storetheword(string x)//NO. 11 member initialization in constructo
 
 
 Thegame::Thegame()
-{}
+{
+}
 
 Thegame::~Thegame()//No. 12 at least 2 destructors/ Functie slaat laatst gekozen woord op in een .txt file // No. 45 useful usage of (modern) file-I/O 
 {					// No. 60 a nice extra that you think that should deserve grading (stuff you put time in and is not rewarded by an item above)
